@@ -319,7 +319,8 @@ update your config and reprint the 20x20 cube until satisfied.
 
 </details>
 
-
+<br>
+		
 See the example.cfg file for a description of available parameters.
 
 Resonance Compensation has not yet been setup.
