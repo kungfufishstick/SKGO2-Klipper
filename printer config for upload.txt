@@ -1,5 +1,3 @@
-
-
 [stepper_x]
 step_pin: P2.2
 dir_pin: !P2.6
