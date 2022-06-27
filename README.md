@@ -232,15 +232,15 @@ Explore docs on the klipper github. Some things of note for this setup are:
 - config_checks.md 
 - Verification checks and PID calibration
 
-            <><><> EMPHASIS ON BED MESH <><><>
-The way bed mesh handles positioning has changed. It is now based on the probe
-position, not the nozzle. Min and max positions need to account for probe offset.
-
 </details>
+		
+| :warning: EMPHASIS ON BED MESH |
+| --- |
+| The way bed mesh handles positioning has changed. It is now based on the probe position, not the nozzle. Min and max positions need to account for probe offset. |
 
 <br>
 
-### Depreciated Guides
+### Older Guides
 
 **<details><summary>Adjusting E-Steps (Step Distance) by user ikarisan</summary>**
 
