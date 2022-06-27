@@ -21,7 +21,7 @@ stealthchop_threshold: 250
 interpolate: True
 sense_resistor: 0.110
 diag_pin: ^P1.29
-driver_SGTHRS: 95
+driver_SGTHRS: 90
 
 [stepper_y]
 step_pin: P0.19
