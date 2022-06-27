@@ -1,6 +1,6 @@
 # SKGO2-Klipper
-Klipper config for SKGO2
 
+Klipper config for SKGO2
 
 This file is compiled from the Klipper github for Big Tree Tech SKR v1.3 and configured forthe  SecKit Go 2.
 
