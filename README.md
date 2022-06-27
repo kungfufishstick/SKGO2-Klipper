@@ -245,7 +245,7 @@ Explore docs on the klipper github. Some things of note for this setup are:
 
 ### Older Guides
 
-**<details><summary>Adjusting E-Steps (Step Distance) by user ikarisan</summary>**
+<details><summary>Adjusting E-Steps (Step Distance) by user ikarisan</summary>
 
 |Information found at: |
 | --- |
