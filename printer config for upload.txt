@@ -205,13 +205,13 @@ gcode:
 [bed_screws]
 screw1: 10,40
 screw2: 170,40
-screw3: 300,40
+screw3: 310,40
 screw4: 10,190
 screw5: 160,190
-screw6: 300,190
-screw7: 10,330
-screw8: 180,330
-screw9: 300,330
+screw6: 310,190
+screw7: 10,310
+screw8: 180,310
+screw9: 310,310
 horizontal_move_z: 10
 speed: 50
 
@@ -229,11 +229,11 @@ screw5: 175,180
 screw5_name: Middle middle screw
 screw6: 310,180
 screw6_name: Middle right screw
-screw7: 30,325
+screw7: 30,310
 screw7_name: Rear left screw
-screw8: 190,325
+screw8: 190,310
 screw8_name: Rear middle screw
-screw9: 310,325
+screw9: 310,310
 screw9_name: Rear right screw
 horizontal_move_z: 10
 speed: 50
