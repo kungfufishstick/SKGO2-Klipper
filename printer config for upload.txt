@@ -221,7 +221,7 @@ gcode:
 # Move the nozzle near the bed
     G1 Z5 F3000
 # Move the nozzle very close to the bed
-    G1 Z0.5 F300
+    G1 Z1 F300
 # Wait for bed to reach temperature
     M190 S{BED_TEMP}
 # Set and wait for nozzle to reach temperature
