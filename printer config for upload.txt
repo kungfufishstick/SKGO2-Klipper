@@ -105,9 +105,9 @@ heater_pin: P2.5
 sensor_type: ATC Semitec 104GT-2
 sensor_pin: P0.23
 control: pid
-pid_Kp=67.355
-pid_Ki=1.848
-pid_Kd=613.775
+pid_Kp=64.761
+pid_Ki=1.248
+pid_Kd=840.280
 min_temp: 0
 max_temp: 120
 
