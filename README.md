@@ -6,7 +6,7 @@ This file is compiled from the Klipper github for Big Tree Tech SKR v1.3 and con
 
 ## Printer Specifications
 - Core XY SecKit Go 2
-- BTT SKR v1.3
+- Big Tree Tech SKR v1.3
 - BL Touch v3.1
 - TMC2209 stepper driver motors
 - XYZ Linear Rails
