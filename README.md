@@ -15,7 +15,7 @@ This file is compiled from the Klipper github for Big Tree Tech SKR v1.3 and con
 - Single 40x40x20 blower motor for part cooling
 - Cooling duct with volcano nozzle:
     - [Thingiverse Volcano Nozzle Cooling Duct](https://www.thingiverse.com/thing:4594501)
-- Triangle Labs BMG Extruder
+- Bondtech BMG Extruder
 - E3D Volcano Hotend
 - 12864 LCD
 
