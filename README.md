@@ -61,7 +61,6 @@ sudo service klipper start
 | Information found at: |
 | --- |
 | [Klipper3d Rotation Distance](https://www.klipper3d.org/Rotation_Distance.html) |
-| [Hardware Inspection for Rotation Distance](https://www.klipper3d.org/Rotation_Distance.html#obtaining-rotation_distance-by-inspecting-the-hardware) |
 
 The X, Y, and Z axis are all the same motor, fixed to a 16T pulley. Z is different since it runs to dual Z axis T8 lead screws that are each fixed to 20T pulleys, but the rotation distance will hopefully be the same since the motor runs with a 16T pulley. 
 
@@ -164,42 +163,55 @@ rotation_distance = 4
 
 Use Measure and Trim method to calibrate rotation_distance for the Extruder. Can use previous measurements, if you have them. I'm starting from scratch.
 
-<details><summary>Using previously calculated step distance</summary>
+This build uses the Bondtech BMG extruder connected to a pancake Moons Stepper NEMA 17 1.8. The esteps provided by Bondtech for this extruder are 415. 
 
-</br>
-
-***Formula:***
-```
-rotation_distance = <full_steps_per_rotation> * <microsteps> * <step_distance>
-```
-
-*Round to nearest whole number if within .01.*
+**Formula:**
 
 ```
-Extruder rotation_distance = 200 * 16 * .001193 (3.8176 round up 4)
+rotation_distance = <full_steps_per_rotation> * <microsteps> / <steps_per_mm>
+rotation_distance = <200> * <32> / <415>
+rotation_distance = 7.711
 ```
 
-1. Make sure the extruder has filament in it, the hotend is heated to an 
- 	appropriate temperature, and the printer is ready to extrude.
-2. Use a marker to place a mark on the filament around 70mm from the intake 
-of the extruder body. Then use a digital calipers to measure the actual 
-	distance of that mark as precisely as one can. Note this as 
-	<initial_mark_distance>.
-3. Home all axis to get in "printer ready" state
-4. Lift up your nozzle by 50mm (to make room for the filament!)
-5. Execute the following commands (one by one)
-  a) G92 E0 -This resets the "extruded material" value to 0.
-  b) G1 E50 F60
-6. This extrudes 50mm filament with 60mm/min.
-7. It is important to use the slow extrusion rate for this test as a faster 
-	rate can cause high pressure in the extruder which will skew the results. 
-	(Do not use the "extrude button" on graphical front-ends for this test 
-	as they extrude at a fast rate.)
-7. Use the digital calipers to measure the new distance between the extruder 
-	body and the mark on the filament. Note this as <subsequent_mark_distance>. 
-	Then calculate: 
-	actual_extrude_distance = <initial_mark_distance> - <subsequent_mark_distance>
-</details>
+If testing shows issues with the 32 microstep value, 16 microsteps can be used with a rotation_distance value of 15.422
+
+
+**Measure and Trim Method**
+
+
+1. Make sure the extruder has filament in it, the hotend is heated to an appropriate temperature, and the printer is ready to extrude.
+    
+2. Use a marker to place a mark on the filament around 70mm from the intake of the extruder body. Then use a digital calipers to measure the actual distance of that mark as precisely as one can. Note this as ```<initial_mark_distance>```.
+    
+3. Extrude 50mm of filament with the following command sequence: 
+    
+- G91 followed by G1 E50 F60. 
+- Note 50mm as ```<requested_extrude_distance>```. 
+- Wait for the extruder to finish the move (it will take about 50 seconds). 
+	- It is important to use the slow extrusion rate for this test as a faster rate can cause high pressure in the extruder which will skew the results. 
+	
+| :warning: NOTE |
+|--------------------|
+| Do not use the "extrude button" on graphical front-ends for this test as they extrude at a fast rate. |
+    
+4. Use the digital calipers to measure the new distance between the extruder body and the mark on the filament. Note this as ```<subsequent_mark_distance>```. Then calculate: 
+    
+```
+actual_extrude_distance = <initial_mark_distance> - <subsequent_mark_distance>
+```
+
+5. Calculate rotation_distance as: 
+
+```
+rotation_distance = <previous_rotation_distance> * <actual_extrude_distance> / <requested_extrude_distance> 
+```
+
+Round the new rotation_distance to three decimal places.
+
+
+If the ```actual_extrude_distance``` differs from ```requested_extrude_distance``` by more than about 2mm then it is a good idea to perform the steps above a second time.
+
+
 </details>
 
 
@@ -208,20 +220,20 @@ of the extruder body. Then use a digital calipers to measure the actual
 
 **<details><summary>Calibrate Bed Screws</summary>**
 
-First run BED_SCREWS_ADJUST through the terminal tab in Octoprint
+First run ```BED_SCREWS_ADJUST``` through the terminal tab in Octoprint
 
 Perform the paper test at each point.
 
-Type ADJUSTED into the terminal if you adjusted the bed screw by 1/8th of a turn
+Type ```ADJUSTED``` into the terminal if you adjusted the bed screw by 1/8th of a turn
 or more.
-When satisfied type ACCEPT into the terminal to move on.
+When satisfied type ```ACCEPT``` into the terminal to move on.
 
-ACCEPT/ADJUSTED across each screw point.
+```ACCEPT/ADJUSTED``` across each screw point.
 
-After doing this, G28 and type SCREWS_TILT_CALCULATE into the terminal to use the 
+After doing this, ```G28``` and type ```SCREWS_TILT_CALCULATE``` into the terminal to use the 
 BL Touch to probe the bed and klipper will return values for bed screw rotation.
 
-Rinse and repeat G28 and SCREWS_TILT_CALCULATE until you are satisfied with the
+Rinse and repeat ```G28``` and ```SCREWS_TILT_CALCULATE``` until you are satisfied with the
 bed leveling.
 
 </details>
