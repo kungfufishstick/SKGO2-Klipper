@@ -85,7 +85,11 @@ rotation_distance = 32
 
 | :warning: NOTE |
 |--------------------------------------------------------|
-| I will be testing the Z axis to make sure. It looks correct on paper but feels off. I'm pretty sure I will need to follow the guide for lead screws.  |
+| ~~I will be testing the Z axis to make sure. It looks correct on paper but feels off. I'm pretty sure I will need to follow the guide for lead screws.~~  |
+
+| :warning: UPDATE |
+|------------------|
+| This turned out to be true. Microsteps were also wrong and needed to be set to 32. So microsteps 32 and rotation distance 8.
 
 If the lead screw guide turns out to be the correct one then the formula and result is as follows:
 
