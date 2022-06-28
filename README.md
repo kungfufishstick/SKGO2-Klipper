@@ -24,6 +24,10 @@ This file is compiled from the Klipper github for Big Tree Tech SKR v1.3 and con
 - Z motor connects to 16T gear and moves 2mm pitch belt that runs to dual Z lead screws with 20T gear. The lead screw is a T8, so it is 2mm pitch and 4 threads.
 - Build Volume: 310x310x350 mm^3
 
+| :warning: NOTICE |
+|------------------|
+Microsteps for this build is actually 32. 
+
 ## Raspberry Pi Details
 
 - Uses Octopi with KIAUH. 
