@@ -78,8 +78,8 @@ filament_diameter: 1.750
 heater_pin: P2.7
 sensor_type: EPCOS 100K B57560G104F
 sensor_pin: P0.24
-pressure_advance: 0.075
-pressure_advance_smooth_time: 0.010
+pressure_advance: 0.06
+# pressure_advance_smooth_time: 0.010
 control: pid
 # tune for Volcano extruder at 230
 pid_Kp: 30.023
