@@ -72,9 +72,7 @@ step_pin: P2.13
 dir_pin: P0.11
 enable_pin: !P2.12
 microsteps: 16
-#rotation_distance: 33.500
-rotation_distance: 4
-#step_distance: .001193
+rotation_distance: 7.711
 nozzle_diameter: 0.800
 filament_diameter: 1.750
 heater_pin: P2.7
