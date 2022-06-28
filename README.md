@@ -4,6 +4,18 @@ Klipper config for custom SKGO2
 
 This file is compiled from the Klipper github for Big Tree Tech SKR v1.3 and configured forthe  SecKit Go 2.
 
+| :warning: TODO |
+|----------------|
+| ~~Tune rotation distance of all axis and extruder~~ |
+| ~~Tune PID for heated bed~~ |
+| Tune PID for nozzle |
+| Tune Nozzle temp for Green Gate 3d recycled black PETG |
+| Tune Pressure Advance |
+| Tune Resonance Compensation |
+
+[PID Tuning](https://www.klipper3d.org/Config_checks.html)
+[]()
+
 ## Printer Specifications
 - Core XY SecKit Go 2
 - Big Tree Tech SKR v1.3
