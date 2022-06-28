@@ -9,9 +9,9 @@ This file is compiled from the Klipper github for Big Tree Tech SKR v1.3 and con
 | ~~Tune rotation distance of all axis and extruder~~ |
 | ~~Tune PID for heated bed~~ |
 | ~~Tune PID for nozzle~~ |
-| Tune Flow Rate for PETG Filament |
-| Tune Nozzle temp for Green Gate 3d recycled black PETG |
-| Tune Pressure Advance |
+| ~~Tune Flow Rate for PETG Filament~~ |
+| ~~Tune Nozzle temp for Green Gate 3d recycled black PETG~~ |
+| ~~Tune Pressure Advance~~ |
 | Tune Resonance Compensation |
 
 [PID Tuning](https://www.klipper3d.org/Config_checks.html)
