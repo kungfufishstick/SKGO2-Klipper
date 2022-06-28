@@ -129,22 +129,22 @@ rotation_distance = <full_steps_per_rotation> * <microsteps> * <step_distance>
 ```
 X Axis Rotation Distance
 
-rotation_distance = 200 * 16 * .00503 
-rotation_distance = 16.096 (rounded to 16)
+rotation_distance = 200 * 32 * .005 
+rotation_distance = 32
 ```
 
 ```
 Y Axis Rotation Distance
 
-rotation_distance = 200 * 16 * .00500 
-rotation_distance = 16
+rotation_distance = 200 * 32 * .00500 
+rotation_distance = 32
 ```
 
 ```
 Z Axis Rotation Distance
 
-rotation_distance = 200 * 16 * .00125 
-rotation_distance = 4
+rotation_distance = 200 * 32 * .00125 
+rotation_distance = 8
 ```
 
 </details>
@@ -185,7 +185,7 @@ If testing shows issues with the 32 microstep value, 16 microsteps can be used w
     
 3. Extrude 50mm of filament with the following command sequence: 
     
-- G91 followed by G1 E50 F60. 
+- ```G91``` followed by ```G1 E50 F60```. 
 - Note 50mm as ```<requested_extrude_distance>```. 
 - Wait for the extruder to finish the move (it will take about 50 seconds). 
 	- It is important to use the slow extrusion rate for this test as a faster rate can cause high pressure in the extruder which will skew the results. 
